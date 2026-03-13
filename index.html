@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dr. Akmal — Вертебролог / Нейрохирург | Dr Akmal — Vertebrolog / Neyroxirurg</title>
+  <meta name="description" content="Вертебролог и нейрохирург в Ташкенте. Консультации, диагностика боли в спине и шее, план лечения. Запись через Taplink/телефон." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__logo">A</div>
+        <div class="brand__text">
+          <div class="brand__name">Dr. Akmal</div>
+          <div class="brand__tag" data-i18n="tagline">Вертебролог • Нейрохирург</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#services" data-i18n="nav_services">Услуги</a>
+        <a href="#cases" data-i18n="nav_cases">С чем обращаются</a>
+        <a href="#contacts" data-i18n="nav_contacts">Контакты</a>
+        <a class="btn btn--small" href="http://taplink.cc/akmaldr" target="_blank" rel="noreferrer" data-i18n="nav_book">
+          Записаться
+        </a>
+      </nav>
+
+      <div class="lang">
+        <button class="lang__btn" id="btnRu" onclick="setLang('ru')" aria-label="Русский">RU</button>
+        <button class="lang__btn" id="btnUz" onclick="setLang('uz')" aria-label="O‘zbek">UZ</button>
+      </div>
+
+      <button class="burger" aria-label="Открыть меню" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#services" onclick="toggleMenu()" data-i18n="nav_services">Услуги</a>
+      <a href="#cases" onclick="toggleMenu()" data-i18n="nav_cases">С чем обращаются</a>
+      <a href="#contacts" onclick="toggleMenu()" data-i18n="nav_contacts">Контакты</a>
+      <a href="http://taplink.cc/akmaldr" target="_blank" rel="noreferrer" class="btn" onclick="toggleMenu()" data-i18n="nav_book">
+        Записаться
+      </a>
+
+      <div class="mobile-lang">
+        <button class="lang__btn" onclick="setLang('ru')">RU</button>
+        <button class="lang__btn" onclick="setLang('uz')">UZ</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <div class="badge" data-i18n="badge">Приём по записи • Онлайн и очно</div>
+
+        <h1 data-i18n="h1">
+          Боль в спине и шее — найдём причину и составим понятный план лечения
+        </h1>
+
+        <p class="lead" data-i18n="lead">
+          Консультация вертебролога/нейрохирурга: осмотр, разбор МРТ/КТ, рекомендации и контроль динамики.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn" href="http://taplink.cc/akmaldr" target="_blank" rel="noreferrer" data-i18n="cta_taplink">
+            Записаться через Taplink
+          </a>
+          <a class="btn btn--ghost" href="tel:+998937878741" data-i18n="cta_call">
+            Позвонить
+          </a>
+        </div>
+
+        <div class="hero__mini">
+          <div class="mini">
+            <div class="mini__k" data-i18n="mini_phone_k">Телефон</div>
+            <div class="mini__v"><a href="tel:+998937878741">+998 93 787 8741</a></div>
+          </div>
+          <div class="mini">
+            <div class="mini__k" data-i18n="mini_addr_k">Адрес</div>
+            <div class="mini__v" data-i18n="mini_addr_v">Ташкент, Юнусабад, Амира Тимура 119A</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__card">
+        <div class="photo">
+          <!-- ВАЖНО: положите фото в папку /images и назовите akmal.jpg -->
+          <img src="./images/akmal.jpg" alt="Фото врача" class="doctor-photo" />
+        </div>
+
+        <div class="quick">
+          <div class="quick__item">
+            <div class="icon">✔</div>
+            <div>
+              <div class="quick__title" data-i18n="q1_title">Диагностика без лишнего</div>
+              <div class="quick__text" data-i18n="q1_text">Осмотр + анализ МРТ/КТ + рекомендации</div>
+            </div>
+          </div>
+
+          <div class="quick__item">
+            <div class="icon">✔</div>
+            <div>
+              <div class="quick__title" data-i18n="q2_title">Понятный план лечения</div>
+              <div class="quick__text" data-i18n="q2_text">Шаги: что делать сейчас и дальше</div>
+            </div>
+          </div>
+
+          <div class="quick__item">
+            <div class="icon">✔</div>
+            <div>
+              <div class="quick__title" data-i18n="q3_title">Сопровождение</div>
+              <div class="quick__text" data-i18n="q3_text">Контроль симптомов и корректировка</div>
+            </div>
+          </div>
+
+          <div class="tapbox">
+            <div class="tapbox__k" data-i18n="tap_k">Taplink</div>
+            <a class="tapbox__v" href="http://taplink.cc/akmaldr" target="_blank" rel="noreferrer">
+              taplink.cc/akmaldr
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section__head">
+        <h2 data-i18n="services_h2">Услуги</h2>
+        <p data-i18n="services_p">Если не уверены, что выбрать — просто напишите/позвоните.</p>
+      </div>
+
+      <div class="grid cards">
+        <article class="card">
+          <h3 data-i18n="s1_h">Первичная консультация</h3>
+          <p data-i18n="s1_p">Осмотр, сбор жалоб, неврологический статус, план лечения.</p>
+          <ul class="list">
+            <li data-i18n="s1_l1">объясняю причину боли простыми словами</li>
+            <li data-i18n="s1_l2">разбираю МРТ/КТ</li>
+            <li data-i18n="s1_l3">даю пошаговые рекомендации</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="s2_h">Онлайн-консультация</h3>
+          <p data-i18n="s2_p">Подходит, если вы из другого города или хотите «второе мнение».</p>
+          <ul class="list">
+            <li data-i18n="s2_l1">разбор документов и снимков</li>
+            <li data-i18n="s2_l2">оценка рисков и тактики</li>
+            <li data-i18n="s2_l3">рекомендации по дальнейшим шагам</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="s3_h">Контроль и ведение</h3>
+          <p data-i18n="s3_p">Наблюдение в динамике и корректировка плана лечения.</p>
+          <ul class="list">
+            <li data-i18n="s3_l1">контроль симптомов</li>
+            <li data-i18n="s3_l2">коррекция рекомендаций</li>
+            <li data-i18n="s3_l3">ответы по плану лечения</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cases -->
+  <section class="section section--muted" id="cases">
+    <div class="container">
+      <div class="section__head">
+        <h2 data-i18n="cases_h2">С чем чаще всего обращаются</h2>
+        <p data-i18n="cases_p">Ниже — самые частые жалобы пациентов.</p>
+      </div>
+
+      <div class="grid chips">
+        <div class="chip" data-i18n="c1">Боль в пояснице</div>
+        <div class="chip" data-i18n="c2">Боль в шее</div>
+        <div class="chip" data-i18n="c3">Онемение руки/ноги</div>
+        <div class="chip" data-i18n="c4">Грыжа / протрузия</div>
+        <div class="chip" data-i18n="c5">Радикулопатия</div>
+        <div class="chip" data-i18n="c6">Ишиас / «прострел»</div>
+        <div class="chip" data-i18n="c7">Стеноз</div>
+        <div class="chip" data-i18n="c8">Миофасциальная боль</div>
+      </div>
+
+      <div class="warn">
+        <div class="warn__title" data-i18n="warn_title">Важно</div>
+        <div class="warn__text" data-i18n="warn_text">
+          Если есть выраженная слабость в конечности, нарушение мочеиспускания, онемение в промежности,
+          высокая температура и сильная боль — обратитесь за срочной медицинской помощью.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <section class="section section--contacts" id="contacts">
+    <div class="container contacts">
+      <div class="contacts__left">
+        <h2 data-i18n="contacts_h2">Контакты и запись</h2>
+        <p class="lead" data-i18n="contacts_lead">Запишитесь через Taplink или позвоните.</p>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="contact-card__k" data-i18n="tap_k">Taplink</div>
+            <div class="contact-card__v">
+              <a href="http://taplink.cc/akmaldr" target="_blank" rel="noreferrer">taplink.cc/akmaldr</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__k" data-i18n="mini_phone_k">Телефон</div>
+            <div class="contact-card__v">
+              <a href="tel:+998937878741">+998 93 787 8741</a>
+            </div>
+          </div>
+
+          <div class="contact-card contact-card--wide">
+            <div class="contact-card__k" data-i18n="mini_addr_k">Адрес</div>
+            <div class="contact-card__v" data-i18n="addr_full">
+              г. Ташкент, Юнусабадский район, ул. Амира Тимура 119A
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn" href="http://taplink.cc/akmaldr" target="_blank" rel="noreferrer" data-i18n="cta_taplink">
+            Записаться через Taplink
+          </a>
+          <a class="btn btn--ghost" href="tel:+998937878741" data-i18n="cta_call">Позвонить</a>
+        </div>
+
+        <p class="hint" data-i18n="disclaimer">
+          Информация на сайте носит ознакомительный характер и не заменяет очную консультацию врача.
+        </p>
+      </div>
+
+      <div class="contacts__right">
+        <div class="map">
+          <div class="map__placeholder">
+            <div class="map__title" data-i18n="map_title">Карта</div>
+            <div class="map__hint" data-i18n="map_hint">
+              Если хочешь — я вставлю сюда Google/Yandex карту (iframe), просто дай ссылку на точку.
+            </div>
+          </div>
+        </div>
+
+        <div class="floating">
+          <a class="float-btn" href="http://taplink.cc/akmaldr" target="_blank" rel="noreferrer" data-i18n="float_book">
+            Запись
+          </a>
+          <a class="float-btn float-btn--ghost" href="tel:+998937878741" data-i18n="float_call">
+            Звонок
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <span id="year"></span> Dr. Akmal</div>
+      <div class="footer__links">
+        <a href="#services" data-i18n="nav_services">Услуги</a>
+        <a href="#contacts" data-i18n="nav_contacts">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('mobile-menu--open');
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const i18n = {
+      ru: {
+        tagline: "Вертебролог • Нейрохирург",
+        nav_services: "Услуги",
+        nav_cases: "С чем обращаются",
+        nav_contacts: "Контакты",
+        nav_book: "Записаться",
+
+        badge: "Приём по записи • Онлайн и очно",
+        h1: "Боль в спине и шее — найдём причину и составим понятный план лечения",
+        lead: "Консультация вертебролога/нейрохирурга: осмотр, разбор МРТ/КТ, рекомендации и контроль динамики.",
+
+        cta_taplink: "Записаться через Taplink",
+        cta_call: "Позвонить",
+
+        mini_phone_k: "Телефон",
+        mini_addr_k: "Адрес",
+        mini_addr_v: "Ташкент, Юнусабад, Амира Тимура 119A",
+
+        q1_title: "Диагностика без лишнего",
+        q1_text: "Осмотр + анализ МРТ/КТ + рекомендации",
+        q2_title: "Понятный план лечения",
+        q2_text: "Шаги: что делать сейчас и дальше",
+        q3_title: "Сопровождение",
+        q3_text: "Контроль симптомов и корректировка",
+
+        tap_k: "Taplink",
+
+        services_h2: "Услуги",
+        services_p: "Если не уверены, что выбрать — просто напишите/позвоните.",
+
+        s1_h: "Первичная консультация",
+        s1_p: "Осмотр, сбор жалоб, неврологический статус, план лечения.",
+        s1_l1: "объясняю причину боли простыми словами",
+        s1_l2: "разбираю МРТ/КТ",
+        s1_l3: "даю пошаговые рекомендации",
+
+        s2_h: "Онлайн-консультация",
+        s2_p: "Подходит, если вы из другого города или хотите «второе мнение».",
+        s2_l1: "разбор документов и снимков",
+        s2_l2: "оценка рисков и тактики",
+        s2_l3: "рекомендации по дальнейшим шагам",
+
+        s3_h: "Контроль и ведение",
+        s3_p: "Наблюдение в динамике и корректировка плана лечения.",
+        s3_l1: "контроль симптомов",
+        s3_l2: "коррекция рекомендаций",
+        s3_l3: "ответы по плану лечения",
+
+        cases_h2: "С чем чаще всего обращаются",
+        cases_p: "Ниже — самые частые жалобы пациентов.",
+
+        c1: "Боль в пояснице",
+        c2: "Боль в шее",
+        c3: "Онемение руки/ноги",
+        c4: "Грыжа / протрузия",
+        c5: "Радикулопатия",
+        c6: "Ишиас / «прострел»",
+        c7: "Стеноз",
+        c8: "Миофасциальная боль",
+
+        warn_title: "Важно",
+        warn_text: "Если есть выраженная слабость в конечности, нарушение мочеиспускания, онемение в промежности, высокая температура и сильная боль — обратитесь за срочной медицинской помощью.",
+
+        contacts_h2: "Контакты и запись",
+        contacts_lead: "Запишитесь через Taplink или позвоните.",
+
+        addr_full: "г. Ташкент, Юнусабадский район, ул. Амира Тимура 119A",
+
+        map_title: "Карта",
+        map_hint: "Если хочешь — я вставлю сюда Google/Yandex карту (iframe), просто дай ссылку на точку.",
+
+        float_book: "Запись",
+        float_call: "Звонок",
+
+        disclaimer: "Информация на сайте носит ознакомительный характер и не заменяет очную консультацию врача."
+      },
+
+      uz: {
+        tagline: "Vertebrolog • Neyroxirurg",
+        nav_services: "Xizmatlar",
+        nav_cases: "Qanday shikoyatlar",
+        nav_contacts: "Kontaktlar",
+        nav_book: "Yozilish",
+
+        badge: "Qabul yozuv asosida • Onlayn va oflayn",
+        h1: "Bel va bo‘yin og‘rig‘i — sababini aniqlaymiz va aniq davolash rejasini tuzamiz",
+        lead: "Vertebrolog/neyroxirurg konsultatsiyasi: ko‘rik, MRT/KT tahlili, tavsiyalar va nazorat.",
+
+        cta_taplink: "Taplink orqali yozilish",
+        cta_call: "Qo‘ng‘iroq qilish",
+
+        mini_phone_k: "Telefon",
+        mini_addr_k: "Manzil",
+        mini_addr_v: "Toshkent, Yunusobod, Amir Temur 119A",
+
+        q1_title: "Ortiqcha tekshiruvsiz",
+        q1_text: "Ko‘rik + MRT/KT tahlili + tavsiyalar",
+        q2_title: "Tushunarli reja",
+        q2_text: "Qadam-baqadam: hozir va keyin",
+        q3_title: "Kuzatuv",
+        q3_text: "Belgilar nazorati va tuzatish",
+
+        tap_k: "Taplink",
+
+        services_h2: "Xizmatlar",
+        services_p: "Qaysi birini tanlashni bilmasangiz — yozing yoki qo‘ng‘iroq qiling.",
+
+        s1_h: "Birlamchi konsultatsiya",
+        s1_p: "Ko‘rik, shikoyatlar, nevrologik status, davolash rejasi.",
+        s1_l1: "og‘riq sababini sodda tushuntiraman",
+        s1_l2: "MRT/KTni tahlil qilaman",
+        s1_l3: "qadam-baqadam tavsiyalar beraman",
+
+        s2_h: "Onlayn konsultatsiya",
+        s2_p: "Boshqa shahardan bo‘lsangiz yoki “ikkinchi fikr” kerak bo‘lsa.",
+        s2_l1: "hujjatlar va tasvirlarni ko‘rib chiqish",
+        s2_l2: "xavf va taktika bahosi",
+        s2_l3: "keyingi qadamlar bo‘yicha tavsiya",
+
+        s3_h: "Nazorat va kuzatuv",
+        s3_p: "Dinamikada kuzatish va rejani tuzatish.",
+        s3_l1: "belgilarni nazorat qilish",
+        s3_l2: "tavsiyalarni yangilash",
+        s3_l3: "davolash rejasi bo‘yicha javoblar",
+
+        cases_h2: "Ko‘p uchraydigan shikoyatlar",
+        cases_p: "Quyida bemorlar ko‘p murojaat qiladigan holatlar.",
+
+        c1: "Bel og‘rig‘i",
+        c2: "Bo‘yin og‘rig‘i",
+        c3: "Qo‘l/oyoq uvishishi",
+        c4: "Churra / protruzia",
+        c5: "Radikulopatiya",
+        c6: "Ishias / “otib ketish”",
+        c7: "Stenoz",
+        c8: "Miofasial og‘riq",
+
+        warn_title: "Muhim",
+        warn_text: "Agar qo‘l/oyoqda kuchli holsizlik, siydik chiqarish buzilishi, chanoq sohasida uvishish, yuqori isitma va kuchli og‘riq bo‘lsa — tez yordamga murojaat qiling.",
+
+        contacts_h2: "Kontakt va yozilish",
+        contacts_lead: "Taplink orqali yoziling yoki qo‘ng‘iroq qiling.",
+
+        addr_full: "Toshkent shahri, Yunusobod tumani, Amir Temur ko‘chasi 119A",
+
+        map_title: "Xarita",
+        map_hint: "Xohlasangiz Google/Yandex xaritasini (iframe) qo‘shib beraman — faqat lokatsiya linkini yuboring.",
+
+        float_book: "Yozilish",
+        float_call: "Qo‘ng‘iroq",
+
+        disclaimer: "Saytdagi ma’lumotlar umumiy tanishtiruv uchun, shifokor ko‘rigini almashtirmaydi."
+      }
+    };
+
+    function setLang(lang){
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = lang === "uz" ? "uz" : "ru";
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if(i18n[lang] && i18n[lang][key]) el.textContent = i18n[lang][key];
+      });
+
+      document.getElementById("btnRu").classList.toggle("lang__btn--active", lang === "ru");
+      document.getElementById("btnUz").classList.toggle("lang__btn--active", lang === "uz");
+    }
+
+    setLang(localStorage.getItem("lang") || "ru");
+  </script>
+</body>
+</html>
+
+
+
+
+
+</body>
+</html>
